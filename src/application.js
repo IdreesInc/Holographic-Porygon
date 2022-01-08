@@ -1,5 +1,6 @@
 import "./stylesheet.css";
 import porygonMeshPath from "./porygon/porygon.glb";
+import backgroundPath from "./gradient.jpg";
 import * as THREE from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
@@ -14,13 +15,14 @@ let scene = new THREE.Scene();
 let container = document.getElementById("viewer");
 let controls;
 let loader = new GLTFLoader();
+let textureLoader = new THREE.TextureLoader();
 
 function init() {
     stats = Stats();
     stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
     
-    camera = new THREE.PerspectiveCamera(50, getWidth() / getHeight(), 1, 1000);
-    camera.position.z = 10;
+    camera = new THREE.PerspectiveCamera(50, getWidth() / getHeight(), 1, 75);
+    camera.position.set(-3, 2.8, 4);
     
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -31,13 +33,35 @@ function init() {
     container.appendChild(renderer.domElement);
     
     controls = new OrbitControls(camera, renderer.domElement);
+    camera.lookAt(new THREE.Vector3(0, 0.2, 0));
 
-    const light = new THREE.AmbientLight( 0x404040, 2 ); // soft white light
+    const light = new THREE.AmbientLight( 0xffffff, 2 ); // soft white light
     scene.add( light );
 
-    const light2 = new THREE.PointLight( 0xffffff, 5, 100 );
-    light2.position.set( 50, 50, 50 );
+    const light2 = new THREE.PointLight( 0xff00ae, 5, 500 );
+    light2.position.set( 10, -50, 50 );
     scene.add( light2 );
+
+    const sphereSize = 1;
+    const pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
+    scene.add( pointLightHelper2 );
+
+    const light3 = new THREE.PointLight( 0x7F00FF, 2, 100 );
+    light3.position.set( -50, 50, 50 );
+    scene.add( light3 );
+
+    const pointLightHelper3 = new THREE.PointLightHelper( light3, sphereSize );
+    scene.add( pointLightHelper3 );
+
+    const size = 250;
+    const divisions = 130;
+
+    const gridHelper = new THREE.GridHelper( size, divisions, 0xF62E97, 0xF62E97 );
+    scene.add( gridHelper );
+
+    textureLoader.load(backgroundPath, function(t) {
+        scene.background = t;
+    });
 
     loadPorygon();
 
@@ -53,6 +77,13 @@ function loadPorygon() {
         // called when the resource is loaded
         function ( gltf ) {
             scene.add( gltf.scene );
+
+            gltf.scene.traverse(function ( child ) {
+                if (child instanceof THREE.Mesh) {
+                    console.log(child.name);
+                }
+            });
+
 
             gltf.animations; // Array<THREE.AnimationClip>
             gltf.scene; // THREE.Group

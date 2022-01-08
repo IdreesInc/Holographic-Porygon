@@ -26,6 +26,13 @@ module.exports = {
 					filename: '[name][ext]'
 				}
 			},
+			{
+				test: /\.jpg/,
+				type:"asset/resource",
+				generator: {
+					filename: '[name][ext]'
+				}
+			},
 		]
 	},
 	plugins: [
