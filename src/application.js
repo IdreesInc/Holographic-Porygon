@@ -140,17 +140,17 @@ function animatePorygon() {
     if (tail) {
         const RANGE = Math.PI * 0.1;
         const ORIGIN = 0.855842168538818
-        tail.rotation.y  = Math.sin(milliseconds * 0.015) * RANGE + ORIGIN;
+        tail.rotation.y  = Math.sin(milliseconds * 0.01) * RANGE + ORIGIN;
     }
     if (leftFoot) {
-        leftFoot.rotation.z = Math.sin(milliseconds * 0.01) * Math.PI * 0.1;
+        leftFoot.rotation.z = Math.sin(milliseconds * 0.005) * Math.PI * 0.1;
     }
     if (rightFoot) {
-        rightFoot.rotation.z = Math.sin(milliseconds * 0.01) * Math.PI * 0.1 + Math.PI;
+        rightFoot.rotation.z = Math.sin(milliseconds * 0.005) * Math.PI * 0.1 + Math.PI;
     }
     if (head) {
         const ORIGIN = -0.3530296061149312;
-        head.rotation.y  = Math.sin(milliseconds * 0.01) * Math.PI * 0.015 + ORIGIN;
+        // head.rotation.y  = Math.sin(milliseconds * 0.01) * Math.PI * 0.015 + ORIGIN;
     }
     if (porygon) {
         porygon.position.set(0, Math.sin(milliseconds * 0.0045) * Math.PI * 0.03, 0);
