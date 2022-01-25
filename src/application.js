@@ -1,11 +1,12 @@
 import "./stylesheet.css";
-import "./porygon-sprite.png";
-import porygonMeshPath from "./porygon/porygon.glb";
-import backgroundPath from "./gradient.jpg";
+import porygonMeshPath from "./assets/porygon.glb";
+import backgroundPath from "./assets/gradient.jpg";
+
 import * as THREE from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Stats from "three/examples/jsm/libs/stats.module.js";
+import * as HoloPlay from './holoplay.module.mjs';
 
 console.log("Initializing scene");
 
@@ -17,6 +18,7 @@ let container = document.getElementById("viewer");
 let controls;
 let loader = new GLTFLoader();
 let textureLoader = new THREE.TextureLoader();
+let lookingGlass = true;
 let porygon;
 let rightFoot;
 let tail;
@@ -25,25 +27,52 @@ let leftFoot;
 let endWaist;
 
 function init() {
-    stats = Stats();
-    stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-    
-    camera = new THREE.PerspectiveCamera(50, getWidth() / getHeight(), 1, 75);
-    camera.position.set(-3, 2.9, 3.5);
-    
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setClearColor( 0x000000, 0.0 );
-    renderer.setSize(getWidth(), getHeight());
-    
-    container.appendChild(stats.dom);
-    container.appendChild(renderer.domElement);
-    
-    controls = new OrbitControls(camera, renderer.domElement);
-    const TARGET_Y = 0.3;
-    camera.lookAt(new THREE.Vector3(0, TARGET_Y, 0));
-    controls.target.set(0, TARGET_Y, 0);
+    // Modified HoloPlay.js to add this function
+    HoloPlay.detectDevice((devices) => {
+        lookingGlass = devices.length > 0;
+        if (!lookingGlass) {
+            console.log("No HoloPlay devices found");
+            stats = Stats();
+            stats.showPanel(0);
+            container.appendChild(stats.dom);
+        }
+        initRendering();
+    });
+}
 
+function initRendering() {
+    if (lookingGlass) {
+        renderer = new HoloPlay.Renderer({tileCount: new THREE.Vector2(10, 18), quiltResolution: 4096 * 1.5});
+    } else {
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setClearColor( 0x000000, 0.0 );
+        renderer.setSize(getWidth(), getHeight());
+    }
+    container.appendChild(renderer.domElement);
+
+    if (lookingGlass) {
+        camera = new HoloPlay.Camera();
+        const DIST = 3.5;
+        camera.position.set(-3.2 * DIST, 1.8 * DIST, 4.2 * DIST);
+    } else {
+        camera = new THREE.PerspectiveCamera(50, getWidth() / getHeight(), 1, 75);
+        camera.position.set(-3, 2.8, 3.5);
+    }
+    controls = new OrbitControls(camera, renderer.domElement);
+
+    const TARGET_Y = lookingGlass ? 1 : 0.3;
+    camera.lookAt(new THREE.Vector3(-0.15, TARGET_Y, 0));
+    controls.target.set(0, TARGET_Y, 0);
+    
+    loadScene();
+    loadPorygon();
+
+    window.addEventListener("resize", onResize, false);
+    animate();
+}
+
+function loadScene() {
     const light = new THREE.AmbientLight( 0xffffff, 2 ); // soft white light
     scene.add( light );
 
@@ -68,71 +97,42 @@ function init() {
     const gridHelper = new THREE.GridHelper( size, divisions, 0xF62E97, 0xF62E97 );
     scene.add( gridHelper );
 
-    textureLoader.load(backgroundPath, function(t) {
-        scene.background = t;
+    textureLoader.load(backgroundPath, function(texture) {
+        scene.background = texture;
     });
-
-    loadPorygon();
-
-    window.addEventListener("resize", renderer.onResize, false);
-    animate();
 }
 
 function loadPorygon() {
-    // Load a glTF resource
     loader.load(
-        // resource URL
         porygonMeshPath,
-        // called when the resource is loaded
-        function ( gltf ) {
-            scene.add( gltf.scene );
-
+        function (gltf) {
             porygon = gltf.scene;
-
-            gltf.scene.traverse(function ( child ) {
-                if (child instanceof THREE.Mesh) {
-                    console.log(child.name);
-                }
-            });
-
-            // console.log(gltf);
-
-            let armature = gltf.scene.children[0];
-            let pm0137_00 = armature.children[0];
-            let origin = pm0137_00.children[0];
-            let waist = origin.children[0];
-
-            console.log(waist.children);
-
-            rightFoot = waist.children[0];
-            tail = waist.children[1];
-            head = waist.children[2];
-            leftFoot = waist.children[3];
-            endWaist = waist.children[4];
-
-            gltf.animations; // Array<THREE.AnimationClip>
-            gltf.scene; // THREE.Group
-            gltf.scenes; // Array<THREE.Group>
-            gltf.cameras; // Array<THREE.Camera>
-            gltf.asset; // Object
+            rightFoot = porygon.getObjectByName("RFoot");
+            tail = porygon.getObjectByName("Tail");
+            head = porygon.getObjectByName("Head");
+            leftFoot = porygon.getObjectByName("LFoot");
+            endWaist = porygon.getObjectByName("EndWaist");
+            scene.add(porygon);
         },
-        // called while loading is progressing
-        function ( xhr ) {
-            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+        function (xhr) {
+            // console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
         },
-        // called when loading has errors
-        function ( error ) {
-            console.log( 'An error happened' );
+        function (error) {
+            console.error(error);
         }
     );
 }
 
 function animate() {
-    stats.begin();
-    animatePorygon();
+    if (stats) {
+        stats.begin();
+    }
     requestAnimationFrame(animate);
+    animatePorygon();
     renderer.render(scene, camera);
-    stats.end();
+    if (stats) {
+        stats.end();
+    }
 }
 
 function animatePorygon() {
@@ -153,7 +153,7 @@ function animatePorygon() {
         // head.rotation.y  = Math.sin(milliseconds * 0.01) * Math.PI * 0.015 + ORIGIN;
     }
     if (porygon) {
-        porygon.position.set(0, Math.sin(milliseconds * 0.0045) * Math.PI * 0.03, 0);
+        porygon.position.set(0, Math.sin(milliseconds * 0.0045) * Math.PI * 0.03 + 0.1, 0);
     }
 }
 
@@ -168,7 +168,9 @@ function getHeight() {
 function onResize() {
     camera.aspect = getWidth() / getHeight();
     camera.updateProjectionMatrix();
-    renderer.setSize(getWidth(), getHeight());
+    if (!lookingGlass) {
+        renderer.setSize(getWidth(), getHeight());
+    }
 }
 
 init();
