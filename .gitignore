@@ -3,3 +3,4 @@
 *.blend1
 .DS_Store
 /models
+node_modules
