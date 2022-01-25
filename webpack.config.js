@@ -17,7 +17,10 @@ module.exports = {
 			},
 			{
 				test: /\.glb/,
-				type:"asset/resource"
+				type:"asset/resource",
+				generator: {
+					filename: '[name][ext]'
+				}
 			},
 			{
 				test: /\.png/,
