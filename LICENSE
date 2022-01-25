@@ -1,0 +1,241 @@
+"Porygon" and the assets used in this project are solely owned by the Pokémon Company, Game Freak, and Nintendo. As such, the license for this project does not apply to assets in this repository owned by the aforementioned companies.
+
+HoloPlay.js is copyright of Looking Glass Factory Inc., Copyright 2017-18 Looking Glass Factory Inc. All rights reserved. The license for HoloPlay.js is included at the bottom of this license file.
+
+The following Apache License applies only to the code written by Idrees Hassan and excludes anything mentioned above.
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+And now for the HoloPlay.js license:
+
+HOLOPLAY.JS LICENSE AGREEMENT
+Questions? Email Looking Glass Factory at info@lookingglassfactory.com.
+Thank you for your interest in using the HoloPlay.js Library (the “Library”). The “Library” as defined herein includes any subsequent updates or upgrades made available to you, and any associated documentation, software code, or other materials made available by LGF to you in the LKG HoloPlay.js Library. In order to obtain and use the Library, you must first agree to the terms of this License. This License is an agreement between you and Looking Glass Factory Inc. (“LGF”), and you agree that this License is enforceable like any written and negotiated agreement signed by you and that your use of the Library constitutes acceptance of the License terms. If you do not agree to the terms of this License, then you may not use the Library.
+This Agreement does not govern the use of other services or products provided by LGF other than the Library.
+1. LICENSE AND RESTRICTIONS
+Subject to the terms and conditions of, and your ongoing compliance with, this License, LGF hereby grants to you a worldwide, non-exclusive, royalty-free, license to use, reproduce, modify, distribute and create derivative works of the software contained in the Library. Under this License, you may: download, install, and use the Library on your devices solely to design, develop and test tools and content (such tools and content herein referred to as your “Content”) for LGF’s HoloPlayer One and Looking Glass displays only, on the THREE.js web development framework; and use, reproduce, modify and distribute all or portions of the Library solely as incorporated into your Content and solely to the extent necessary for others to use your Content.
+1.1. Any and all portions of the Library used in your Content will be subject to this License. If you publish, distribute or sublicense the Library as incorporated into your Content, you must ensure the following conditions:
+1.1.1. You must include a credit to the Looking Glass HoloPlay.js Library with the following copyright notice: “Copyright 2017-18 Looking Glass Factory Inc. All rights reserved.”;
+1.1.2. Any license to your content must comply with this License;
+1.1.3. You may not distribute, link or integrate the Library so that any part (or all) of it
+becomes subject to an open source license (other than any open-source code that the
+Library may already use or rely on);
+1.1.4. LGF will not be liable to users of your Content whatsoever for any damages as a result of
+your Content; and
+1.1.5. If the source code of your Content incorporating part of all of the Library is publicly
+available, the Library must include a “LICENSE” text file (the “License Notice”) with a copy of this License.
+1.2. Except with express written permission, under this License, you may NOT:
+1.2.1. use the Library to connect HoloPlayer One or Looking Glass to any software platform or development framework other than Three.js;
+1.2.2. sell, sublicense, rent, loan or lease any portion of the Library to any third party except as expressly provided herein;
+1.2.3. modify the documentation;
+1.2.4. use the Library with any devices other than the HoloPlayer One or Looking Glass displays
+sold by LGF;
+1.2.5. use, license or sublicense the Library to interface with software not authorized or
+approved by LGF hereunder or as expressly stated in other LGF documentation;
+1.2.6. use the Library to commit any act intended to (a) interfere with the normal operation of
+HoloPlayer One or Looking Glass displays, (b) provide software to HoloPlayer One or Looking Glass display users or developers that would induce breach of any LGF agreements, including without limitation this License, or (c) provide software to HoloPlayer One or Looking Glass display users that contains malware, viruses, hacks, bots, Trojan horses, or other malicious code; or
+1.2.7. use the Library for any purpose not expressly permitted by this License.
+2. OWNERSHIP
+2.1. The Library is licensed and not sold to you, and LGF retains and reserves all other rights not granted under this License. LGF retains complete ownership of any and all intellectual property rights in and to the Library, and no title to the Library or any intellectual property of LGF is transferred to you under this License. You do not acquire any rights to the Library except as expressly granted herein.
+2.2. Notwithstanding the foregoing Section 2.1, you retain all rights to your Content, and you have no obligations to share or license your Content (including your source and object code) to LGF or any third parties; provided, however, LGF retains all rights to the Library and the headers, libraries and APIs of HoloPlayer One and Looking Glass and any and all other tools made available by LGF, including those that may be incorporated into your Content by virtue of your producing it through the Library.
+3. GENERAL PROVISIONS
+3.1. LGF may include in the Library additional content for demonstration, references or other specific purposes. Such content will be clearly marked in the Library and is subject to this License and any included terms and conditions.
+
+3.2. Your use of third-party materials included in the Library, or which the Library may be dependent upon (including without limitation, any open-source code and the Three.js development framework), may be subject to other terms and conditions typically found in separate third-party license agreements or license files included with such third-party materials. To the extent such other terms and conditions conflict with the terms and conditions of this License, the former will control with respect to the applicable third-party materials. The terms of licensing the Three.js development framework can be found here: https://github.com/mrdoob/three.js/blob/dev/LICENSE.
+3.3. THE LIBRARY AND ANY COMPONENT THEREOF IS PROVIDED “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL LGF OR ITS AFFILIATES AND SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS LIBRARY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. Some jurisdictions do not permit the exclusion or limitation of implied warranties, so the foregoing limitation may not apply to you in such case. Notwithstanding anything herein to the contrary, LGF’s liability to you under this License shall be limited to the total amount paid by you for the Library.
+3.4. This License does not grant permission to use the trade names, trademarks, service marks, or product names of LGF, including without limitation LOOKING GLASS and HOLOPLAYER ONE, except as required for reasonable and customary use in describing the origin of the Library, and reproducing the content of the License Notice file. Neither LGF’s name nor the names of LGF’s contributors, licensors, employees, or contractors, may be used to endorse or promote products developed using the Library without the specific prior written permission of LGF.
+3.5. If you are granted express permission, in writing, by LGF to perform any action(s) strictly prohibited under this License in Section 1.2 herein, all other terms and conditions of that Section 1.2 and of this License remain in full force and effect and govern your use of the Library and any tools and/or Content created from such permitted use.
+3.6. You are responsible for ensuring that your use of the Library and your Content complies with all applicable laws (including privacy laws) wherever your Content is made available. You acknowledge and agree that you are solely responsible for any health and safety issues arising from your Content.
+3.7. As this License is updated from time to time for future releases of the Library, you agree to abide by and meet all requirements of future updates of this License for those future Library releases, with acceptance evidenced by usage of the Library or any element thereof and the
+
+future updates of this License will apply for your Content that may be developed for or with that future Library or any element thereof (i.e., you cannot sidestep out of the requirements of future updates of the License by developing against an older release of the Library or License). You acknowledge that future versions of the Library may be provided for a fee or otherwise under substantially different terms from those provided hereunder.
+3.8. This License shall continue until it is terminated. LGF reserves the right to terminate this License and all your rights hereunder immediately, and without advance notice, in the event you materially breach this License. On termination, you must delete all versions, copies and downloads of the Library in your possession and you may not register for another copy of the Library under a new license, unless LGF permits otherwise. Additionally, LGF reserves the right to cancel or terminate this License for any of the following reasons:
+3.8.1. If your Content is accused of infringing on a third party’s intellectual property;
+3.8.2. If your Content violates applicable law, regulation or rule;
+3.8.3. If your Content causes health or safety risks;
+3.8.4. If you use the Library with a commercial product other than HoloPlayer One, Looking Glass or Three.js; and
+3.8.6. If you fail to comply with this License.
+3.9. You agree to fully indemnify, defend and hold harmless LGF from any and all claims, losses, costs, damages and expenses (including reasonable attorney's fees) arising out of your Content or any breach of this License.
+3.10. LGF may discontinue or change functionality of the Library at any time, and your continued use of HoloPlayer One, Looking Glass or the Library or use of any modified or additional services in connection therewith is conditioned upon your adherence to the terms of this License, as modified by LGF from time to time, as well as any additional license agreements necessitated by additional features.
+3.11. In the event any provision of this License is determined to be invalid, prohibited or unenforceable by a court or other body of competent jurisdiction, this License shall be construed as if such invalid, prohibited or unenforceable provision has been more narrowly drawn so as not to be invalid, prohibited or unenforceable.
+3.12. You may not assign any rights or obligations under this License without the advance written consent of LGF, which may be withheld in its sole discretion. LGF may assign its rights or obligations under this License in its sole discretion.
+3.13. Failure of either party at any time to enforce any of the provisions of this License will not be construed as a waiver of such provisions or in any way affect the validity of this License or parts thereof.
+
+3.14. Your remedies under this License shall be limited to the right to collect money damages, if any, and you hereby waive your right to injunctive or other equitable relief.
+3.15. You will comply with all applicable export control laws of the United States and any other applicable governmental authority, including without limitation, the U.S. Export Administration Regulations. You agree that this License and the Library and accompanying documentation are LGF’s confidential information (and is not publicly available), and you will not use it, disclose it or make it available to others except in accordance with the terms of this License.
+3.16. This License shall be governed by the laws of the State of New York, without giving effect to choice of law principles. All disputes relating to this License shall be resolved by binding non- appearance-based arbitration before a single arbitrator in New York County, New York. The arbitration shall be conducted in accordance with the rules and procedures of JAMS then in effect, and the judgment of the arbitrator shall be final and capable of entry in any court of competent jurisdiction. You and LGF agree to submit to the personal jurisdiction of the courts located within New York County, New York in connection with any entrance of an arbitrator’s judgment or decision or any dispute with respect to the arbitration process or procedure or LGF’s exercise of its equitable rights or remedies.
