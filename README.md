@@ -16,3 +16,8 @@ Well for starters you'll need a [Looking Glass display](https://lookingglassfact
 ## Can I view the hologram without a Looking Glass Display?
 
 While you can still view it through a normal monitor, the model will appear 2D unless viewed through a lenticular display.
+
+## References
+
+- [Looking Glass Factory](https://lookingglassfactory.com/)
+- [Other examples of Pokémon as holograms](https://blog.lookingglassfactory.com/roundups/community-roundup-september/)
