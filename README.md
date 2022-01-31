@@ -6,6 +6,8 @@ It's a Porygon displayed as a hologram through the [Looking Glass Portrait](http
 
 [Click here to check it out](https://idreesinc.github.io/Holographic-Porygon/dist/), but note that it requires specialized hardware to be viewed as a "hologram"!
 
+[Click here](https://youtu.be/WGUO_ir1-Dw) to check out my overview video and see how it works live!
+
 _Notice: "Porygon", "Pokemon", and the assets used in this project are solely owned by the Pokémon Company, Game Freak, and Nintendo. As such, the license for this project does not apply to assets in this repository owned by the aforementioned companies._
 
 
